@@ -1,80 +1,340 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Tank Solutions SAS</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTS - Alquiler de Equipos para Mantenimiento de Tanques</title>
+    <meta name="description" content="Líderes en alquiler de equipos de alta tecnología para mantenimiento preventivo y correctivo de tanques de almacenamiento.">
+    <link rel="icon" type="image/png" href="public/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo GTS" class="logo" />
-    <h1>Global Tank Solutions SAS</h1>
-    <p>Soluciones integrales para el mantenimiento de tanques</p>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="public/images/logo.png" alt="GTS - Global Tank Solutions" class="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#nosotros" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicios" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#beneficios" class="nav-link">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <section class="intro">
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      En GTS, somos líderes en el alquiler de equipos de alta tecnología para el mantenimiento
-      preventivo y correctivo de tanques de almacenamiento en diversas industrias. Ofrecemos
-      soluciones integrales para optimizar la eficiencia, seguridad y durabilidad de sus activos.
-    </p>
-  </section>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Global Tank Solutions SAS </h1>
+            <p class="hero-subtitle">Líderes en alquiler de equipos especializados para el mantenimiento preventivo y correctivo de tanques de almacenamiento</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
+                <a href="#contacto" class="btn btn-secondary">Contactar</a>
+            </div>
+        </div>
+    </section>
 
-  <section class="services">
-    <h2>Portafolio de Servicios</h2>
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quiénes Somos</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>En <strong>GTS</strong>, somos líderes en el alquiler de equipos de alta tecnología para el mantenimiento preventivo y correctivo de tanques de almacenamiento en diversas industrias (petrolera, química, alimentaria, etc.).</p>
+                    <p>Nuestro compromiso es ofrecer soluciones integrales que optimicen la eficiencia, seguridad y durabilidad de sus activos, garantizando operaciones ininterrumpidas y el cumplimiento de las más estrictas normativas.</p>
+                </div>
+                <div class="about-highlight">
+                    <h3>Nuestro Alcance</h3>
+                    <p>No solo alquilamos equipos; ofrecemos un soporte integral que incluye asesoramiento técnico, acompañamiento y capacitación en el uso de los equipos y un servicio post-alquiler que asegura el éxito de cada proyecto.</p>
+                    <div class="highlight-badge">Más allá del alquiler</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="service">
-      <h3>I. Equipos de Granallado (Gritblasting)</h3>
-      <ul>
-        <li>Granalladoras portátiles y estacionarias</li>
-        <li>Compresores de aire de alta capacidad (185 cfm - 1600 cfm)</li>
-        <li>Tolvas de abrasivo</li>
-        <li>Sistemas de recuperación y reciclaje de abrasivo</li>
-        <li>Accesorios: boquillas, mangueras, EPP, etc.</li>
-      </ul>
-    </div>
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="section-divider"></div>
+            </div>
 
-    <div class="service">
-      <h3>II. Equipos de Pintura y Recubrimientos Industriales</h3>
-      <ul>
-        <li>Equipos Airless de alta presión</li>
-        <li>Bombas de diafragma</li>
-        <li>Agitadores y mezcladores</li>
-        <li>Medidores de espesor</li>
-        <li>Equipos de secado, ventilación y accesorios</li>
-      </ul>
-    </div>
+            <!-- Services Carousel -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Service 1: Blasting -->
+                    <div class="carousel-slide active">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-spray-can"></i>
+                            </div>
+                            <h3 class="service-title">Equipos de Granallado (Gritblasting)</h3>
+                            <p class="service-description">Nuestra flota de equipos de granallado está diseñada para la preparación de superficies, eliminando óxido, pintura vieja, contaminantes y residuos para asegurar una adherencia óptima de los recubrimientos protectores.</p>
+                            <div class="service-features">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Granalladoras portátiles y estacionarias</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Compresores de aire de alta capacidad (185 cfm a 1.600 cfm)</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Tolvas de abrasivo de distintas capacidades</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Sistemas de recuperación y reciclaje de abrasivo</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Accesorios y consumibles completos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="service">
-      <h3>III. Equipos Metalmecánicos para Mantenimiento</h3>
-      <ul>
-        <li>Soldadoras TIG, MIG/MAG y electrodo</li>
-        <li>Equipos de corte por plasma y agua (55.000 psi)</li>
-        <li>Herramientas eléctricas y manuales</li>
-        <li>Equipos de izaje y posicionamiento</li>
-        <li>Medidores, láseres y equipos de inspección</li>
-      </ul>
-    </div>
-  </section>
+                    <!-- Service 2: Painting -->
+                    <div class="carousel-slide">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-paint-roller"></i>
+                            </div>
+                            <h3 class="service-title">Equipos de Pintura y Recubrimientos Industriales</h3>
+                            <p class="service-description">Contamos con la tecnología más avanzada para la aplicación de recubrimientos protectores que prolongan la vida útil de sus tanques, garantizando resistencia a la corrosión, abrasión y agentes químicos.</p>
+                            <div class="service-features">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Equipos Airless de alta presión</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Bombas de diafragma</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Agitadores y mezcladores</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Medidores de espesor de película</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Equipos de secado y ventilación</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <section class="benefits">
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li>Amplia gama de equipos y soluciones integrales</li>
-      <li>Tecnología moderna y segura</li>
-      <li>Asesoramiento técnico especializado (NACE y API 653)</li>
-      <li>Opciones flexibles de alquiler (por m², días, semanas o meses)</li>
-      <li>Compromiso con la seguridad y mantenimiento preventivo</li>
-    </ul>
-  </section>
+                    <!-- Service 3: Metalworking -->
+                    <div class="carousel-slide">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3 class="service-title">Equipos Metalmecánicos para Mantenimiento de Tanques</h3>
+                            <p class="service-description">Ofrecemos herramientas y maquinaria especializada para las tareas de reparación estructural, modificación y adecuación de tanques de almacenamiento.</p>
+                            <div class="service-features">
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Soldadoras TIG, MIG/MAG y electrodo revestido</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Equipos de corte por plasma</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Herramientas de corte y perforación</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Equipos de izaje y posicionamiento</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Equipos de corte con agua (55.000 psi)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <footer>
-    <h3>Contacto</h3>
-    <p>Tel: 3157074284 - 3203231421</p>
-    <p>Email: gerenciacomercialacacias.gts@gmail.com</p>
-    <p>Dirección: Fca. San Antonio, lote 2, Vda. Loma de Tigre, Acacías - Meta</p>
-  </footer>
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                    </div>
+                    <button class="carousel-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beneficios de Elegirnos</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Amplia Gama de Equipos</h3>
+                    <p>Soluciones integrales para todas las etapas del mantenimiento de tanques.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Tecnología de Vanguardia</h3>
+                    <p>Equipos modernos en óptimo estado que cumplen con estándares de seguridad y rendimiento.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Asesoramiento Especializado</h3>
+                    <p>Expertos disponibles con certificaciones NACE CIP I, NACE CIP II y API 653.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Aseguramos la disponibilidad y correcto funcionamiento de nuestras máquinas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexibilidad en el Alquiler</h3>
+                    <p>Opciones por m², días, semanas o meses, adaptándonos a su proyecto.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Compromiso con la Seguridad</h3>
+                    <p>Todos nuestros equipos cumplen con normativas de seguridad industrial vigentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contáctenos hoy mismo</h3>
+                    <p>Estamos listos para ofrecerle una solución a la medida de sus necesidades.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Teléfonos:</strong>
+                            <p>3157074284 - 3203231421</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong>
+                            <p>gerenciacomercialacacias.gts@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Dirección:</strong>
+                            <p>Fca. San Antonio, lote 2, Vda. loma de tigre, Acacias-Meta</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Seleccione un servicio</option>
+                                <option value="granallado">Equipos de Granallado</option>
+                                <option value="pintura">Equipos de Pintura y Recubrimientos</option>
+                                <option value="metalmecanicos">Equipos Metalmecánicos</option>
+                                <option value="todos">Todos los servicios</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+              <p>&copy; 2025 GTS. Todos los derechos reservados.</p>
+              <div class="footer-logo">
+                  <span>Elmer.dev ⚡️</span>
+              </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
