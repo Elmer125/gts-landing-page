@@ -1,0 +1,68 @@
+:root {
+    --primary: #005b73;
+    --secondary: #f0b037;
+    --accent: #2fa8a3;
+    --dark: #1b1b1b;
+    --light: #f7f7f7;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+
+  header {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.3rem;
+  }
+
+  .service {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    section {
+      padding: 1rem;
+    }
+  }
