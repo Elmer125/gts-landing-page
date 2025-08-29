@@ -328,6 +328,9 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  touch-action: pan-y pinch-zoom;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .carousel:active {
@@ -631,7 +634,22 @@ body {
   }
 
   .hero-buttons {
+    flex-direction: column;
     justify-content: center;
+  }
+
+  /* Mobile-specific carousel improvements */
+  .carousel {
+    touch-action: pan-y pinch-zoom;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-container {
+    padding: 0 10px;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
   }
 }
 

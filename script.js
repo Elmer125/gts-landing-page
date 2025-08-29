@@ -21,7 +21,9 @@ const carousel = document.querySelector('.carousel');
 
 // Touch/swipe variables
 let startX = 0;
+let startY = 0;
 let endX = 0;
+let endY = 0;
 let isDragging = false;
 
 function showSlide(index) {
@@ -46,22 +48,39 @@ function prevSlide() {
 // Touch/swipe event handlers
 function handleTouchStart(e) {
   startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+  startY = e.type === 'mousedown' ? e.clientY : e.touches[0].clientY;
   isDragging = true;
 }
 
 function handleTouchMove(e) {
   if (!isDragging) return;
-  e.preventDefault();
+
+  const currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+  const currentY = e.type === 'mousemove' ? e.clientY : e.touches[0].clientY;
+
+  const diffX = Math.abs(currentX - startX);
+  const diffY = Math.abs(currentY - startY);
+
+  // Only prevent default if the movement is more horizontal than vertical
+  // This allows vertical scrolling while still enabling horizontal swipes
+  if (diffX > diffY && diffX > 10) {
+    e.preventDefault();
+  }
 }
 
 function handleTouchEnd(e) {
   if (!isDragging) return;
 
   endX = e.type === 'mouseup' ? e.clientX : e.changedTouches[0].clientX;
+  endY = e.type === 'mouseup' ? e.clientY : e.changedTouches[0].clientY;
+
   const diffX = startX - endX;
+  const diffY = startY - endY;
   const threshold = 50; // Minimum distance for swipe
 
-  if (Math.abs(diffX) > threshold) {
+  // Only trigger slide change if the movement is more horizontal than vertical
+  // and exceeds the threshold
+  if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > threshold) {
     if (diffX > 0) {
       // Swipe left - next slide
       nextSlide();
@@ -93,7 +112,7 @@ indicators.forEach((ind, idx) => {
 });
 
 // Auto-play carousel
-setInterval(nextSlide, 8000);
+setInterval(nextSlide, 10000);
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
