@@ -485,6 +485,8 @@ body {
 .contact {
   padding: 80px 0;
   background: var(--light);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .contact-content {
@@ -492,6 +494,13 @@ body {
   grid-template-columns: 1fr;
   gap: 4rem;
   justify-items: center;
+  max-width: 100%;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
 }
 
 .contact-info h3 {
@@ -511,12 +520,21 @@ body {
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-item i {
   color: var(--secondary);
   font-size: 1.5rem;
   margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contact-item p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .contact-item strong {
@@ -676,6 +694,46 @@ body {
 
   .hero-logo {
     max-width: 220px;
+  }
+
+  /* iOS specific fixes for contact section */
+  .contact {
+    padding: 60px 0;
+    overflow-x: hidden;
+  }
+
+  .contact-info {
+    padding: 0 15px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .contact {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-content {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .contact-item p {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
   }
 }
 
